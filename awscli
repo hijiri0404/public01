@@ -1,0 +1,6 @@
+インバウンド
+aws ec2 revoke-security-group-ingress --group-id sg-xxxxxxx   --ip-permissions IpProtocol=-1,UserIdGroupPairs=[{GroupId=sg-xxxxxxx}] --region us-east-1
+
+
+アウトバウンド
+aws ec2 revoke-security-group-egress --group-id sg-xxxxxxx   --protocol -1 --cidr 0.0.0.0/0 --region us-east-1
